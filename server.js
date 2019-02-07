@@ -28,8 +28,14 @@ app.get('/about', (req, res) => {
 // Where n=99 sets the range of the random number returned
 app.get('/random', (req, res) => {
   const { n } = req.query
-  const value = random(n)
-  res.json({ value })
+  const value = random(n - 1)
+  res.json({ value, message: `Random number between 0 and ${n}, upperbound exclusive.` })
+})
+
+app.get('/roll-dice', (req, res) => {
+  const { n } = req.query
+  const diceValue = randomD(n);
+  res.json({ diceValue, message: `Random ${n} sided dice roll` });
 })
 
 const port = 4000

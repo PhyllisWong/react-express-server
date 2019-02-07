@@ -12,7 +12,9 @@ You'll need to install dependencies.
 
 - `npm install` 
 - Run the project with node or ndoemon
-  - `node server.js` or `nodemon server.js`
+- `node server.js` or `nodemon server.js`
+- port current set to 4000
+- Results viewable at `http://localhost:4000/`
 
 ## API Documentation 
 
